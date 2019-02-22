@@ -1,0 +1,16 @@
+comments:
+  allowedFields     : ["message"]
+  branch            : "master"
+  commitMessage     : "New comment."
+  filename          : "comment-{@timestamp}"
+  format            : "yml"
+  moderation        : false
+  path              : "comments/{options.slug}"
+  # requiredFields    : ['name', 'email', 'message']
+  transforms:
+   # email           : md5
+  generatedFields:
+    date:
+      type          : "date"
+      options:
+        format      : "iso8601"
